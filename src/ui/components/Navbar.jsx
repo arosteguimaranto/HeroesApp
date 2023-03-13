@@ -13,7 +13,7 @@ export const Navbar = () => {
             >
                 Asociaciones
             </Link>
-
+           
             <div className="navbar-collapse">
                 <div className="navbar-nav">
 
@@ -43,7 +43,7 @@ export const Navbar = () => {
 
                  <button
                  className='nav-item nav-link btn'
-                 > LogOut
+                 > Logout
                  </button>
                 </ul>
             </div>
