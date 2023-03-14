@@ -1,23 +1,27 @@
-import { getHeroesByPublisher } from "../helpers"
-
+import {getHeroesByPublisher} from '../helpers';
 
 export const HeroList = ({publisher}) => {
+
+    
      const heroes = getHeroesByPublisher(publisher);
 
 
   return (
-    <ul>
+
+    <ul> 
     {
-         heroes.map( hero => (
-            <li key={hero.id}>
-            {hero.superhero}
-            </li>
+      
+      heroes.map( hero => (
+         <li key={hero.id}>
+         {hero.superhero}
+         </li>
 
-         ))
+      ))
 
 
-    }
-    
+ }
+   
+
     </ul>
   )
 }
