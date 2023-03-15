@@ -9,7 +9,7 @@ export const HeroCard = ({
   characters
 }) => {
 
-  const heroImageUrl = `/assets/heroes/${id}.jpg `;
+  const heroImageUrl =`/assets/heroes/${id}.jpg `;
 
 
   return (
@@ -20,6 +20,20 @@ export const HeroCard = ({
           <div className=" col-4">
             <img src={heroImageUrl} className=" card-img" alt={superhero}></img>
           </div>
+
+          <div className=" col-8"> 
+            <div className="card-body">
+              <h5 className=" card-title">{superhero}</h5>
+              <p className=" card-text">{alter_ego}</p>
+
+              <p>{characters}</p>
+              
+            
+            </div>
+          
+          </div>
+
+
 
         </div>
 
