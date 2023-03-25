@@ -11,9 +11,11 @@ const {login} = useContext(AuthContext)
 
   const onLogin = () => {
     
+    const lastPath = localStorage.getItem('lastPath') || '/'
+
     login('Dylan Arostegui');
     
-    navigate('/', {
+    navigate(lastPath, {
       replace: true
   })
 
