@@ -37,4 +37,26 @@ describe('pruebas en <SearchPage/>', () => {
        
       });
 
+
+      test('debe de llamar el navigate a la pantalla nueva', () => {
+        
+        const inputValue = 'superman';
+
+        render(
+            <MemoryRouter initialEntries={['/search']}>
+                <SearchPage />
+            </MemoryRouter>
+        );
+
+        const input = screen.getByRole('textbox');
+        fireEvent.change( input, { target: { name: 'searchText', value: inputValue }})
+        
+        
+        const form = screen.getByRole('form');
+        fireEvent.submit( form );
+        
+        expect( mockedUseNavigate ).toHaveBeenCalledWith(`?q=${ inputValue }`)
+
+    });
+
 });
